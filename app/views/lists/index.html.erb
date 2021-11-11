@@ -1,0 +1,14 @@
+<h1 class="text-center">Top Movies</h1>
+
+<div class="container">
+  <div class="cards col-8 offset-2">
+    <div class="card-category">
+      <% @lists.each do |list| %>
+        <h2><%= link_to "#{list.name}", list_path(list) %></h2>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= link_to "Créer une nouvelle liste", new_list_path %>
+<%= link_to "Ajouter vos favoris", new_bookmark_path %>

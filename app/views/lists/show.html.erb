@@ -1,0 +1,13 @@
+<h1 class="text-center"><%= @list.name %></h1>
+
+<div class="container">
+  <div class="row col-8">
+    <% @list.movies.each do |movie| %>
+      <h3><%= movie.title %></h3>
+      <p><%= movie.overview %></p>
+      <span><%= movie.rating * ⭐ %></span>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to "Retourner aux listes", lists_path %>
