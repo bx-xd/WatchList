@@ -5,9 +5,9 @@
     <% @list.movies.each do |movie| %>
       <h3><%= movie.title %></h3>
       <p><%= movie.overview %></p>
-      <span><%= movie.rating * ⭐ %></span>
+      <span><%= "⭐" * movie.rating  %></span>
     <% end %>
   </div>
 </div>
-
+<%= link_to "Ajouter vos favoris", new_list_bookmark_path(@list) %>
 <%= link_to "Retourner aux listes", lists_path %>
